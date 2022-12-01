@@ -9,7 +9,7 @@ module.exports = () => {
     mode: 'development',
     resolve: {
       fallback: {
-
+        /*
         "fs": false,
         "http": false,
         "zlib": false,
@@ -21,7 +21,7 @@ module.exports = () => {
         "url": false,
         "util": false,
         "net": false
-
+        */
       },
     },
     entry: {
