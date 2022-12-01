@@ -8,7 +8,8 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 module.exports = () => {
   return {
     mode: 'development',
-    //target: 'node',
+    target: 'node',
+    /*
     resolve: {
       fallback: {
         /*
@@ -33,9 +34,10 @@ module.exports = () => {
         "url": false,
         "util": false,
         "net": false
-        */
+        
       },
     },
+    */
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js'
