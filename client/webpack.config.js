@@ -2,12 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 
 module.exports = () => {
   return {
     mode: 'development',
-    target: 'node',
+    //target: 'node',
     resolve: {
       fallback: {
         /*
@@ -44,6 +45,7 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      new NodePolyfillPlugin(),
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE'
