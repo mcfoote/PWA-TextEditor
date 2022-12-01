@@ -8,7 +8,7 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 module.exports = () => {
   return {
     mode: 'development',
-    target: 'node',
+    //target: 'node',
     resolve: {
       fallback: {
         /*
@@ -68,7 +68,7 @@ module.exports = () => {
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons')
+            destination: path.join('assets', 'icons'),
           },
         ],
       })
