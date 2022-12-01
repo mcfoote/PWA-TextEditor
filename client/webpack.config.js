@@ -10,6 +10,13 @@ module.exports = () => {
     resolve: {
       fallback: {
 
+        "fs": false,
+        "http": false,
+        "zlib": false,
+        "path": false,
+        "crypto": false,
+        "stream": false,
+        "zlib": false,
         "querystring": false,
         "url": false,
         "util": false,
