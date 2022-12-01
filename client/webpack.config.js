@@ -7,8 +7,19 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 module.exports = () => {
   return {
     mode: 'development',
+    target: 'node',
     resolve: {
       fallback: {
+        /*
+        "url": require.resolve("url/"),
+        "path": require.resolve("path-browserify"),
+        "util": require.resolve("util/"),
+        "stream": require.resolve("stream-browserify"),
+        "fs": require.resolve("commonjs fs"),
+        "url": require.resolve("url/"),
+        "querystring": require.resolve("querystring-es3"),
+        "http": require.resolve("stream-http"),
+
         /*
         "fs": false,
         "http": false,
