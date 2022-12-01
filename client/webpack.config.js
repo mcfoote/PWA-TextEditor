@@ -20,6 +20,7 @@ module.exports = () => {
         "querystring": false,
         "url": false,
         "util": false,
+        "net": false
 
       },
     },
