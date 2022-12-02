@@ -20,7 +20,7 @@ export const putDb = async (content) => {
   const editorDb = await openDB('jate', 1);
   const tx = editorDb.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
-  const request = store.add({id: 1, value: content});
+  const request = store.put({id: 1, value: content});
 
   const result = await request;
   console.log('data updated to databse', result);
@@ -33,7 +33,7 @@ export const getDb = async () => {
   const editorDb = await openDB('jate', 1);
   const tx = editorDb.transaction('jate', 'readonly');
   const store = tx.objectStore('jate');
-  const request = store.getAll();
+  const request = store.get(1);
 
   const result = await request;
   console.log('result.value', result);
